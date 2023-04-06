@@ -11,97 +11,72 @@
         <h1>Kalkulator Sederhana</h1>
         <table>
             <tr>
-                <td colspan="4"> 
-                    <input type="text" id="calc-display" value="0" /> 
-                </td>
+                <th colspan="4"> <input type="text" name="display"> </th>
             </tr>
             <tr>
                 <td colspan="2">
-                    <button class="red" id="clear-all-button">AC</button>
+                    <button>AC</button>
                 </td>
                 <td>
-                    <button class="blue" id="clear-button">C</button>
+                    <button>C</button>
                 </td>
                 <td>
-                    <button class="operators" id="perkalian">*</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button value="7" id="7" class="numbers">7</button>
-                </td>
-                <td>
-                    <button value="8" id="8" class="numbers">8</button>
-                </td>
-                <td>
-                    <button value="9" id="9" class="numbers">9</button>
-                </td>
-                <td>
-                    <button class="operators">/</button>
+                    <button>*</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button value="4" id="4" class="numbers">4</button>
+                    <button>7</button>
                 </td>
                 <td>
-                    <button value="5" id="5" class="numbers">5</button>
+                    <button>8</button>
                 </td>
                 <td>
-                    <button value="6" id="6" class="numbers">6</button>
+                    <button>9</button>
                 </td>
                 <td>
-                    <button class="operators">+</button>
+                    <button>/</button>
+                </td>
             </tr>
             <tr>
                 <td>
-                    <button value="1" id="1" class="numbers">1</button>
+                    <button>4</button>
                 </td>
                 <td>
-                    <button value="2" id="2" class="numbers">2</button>
+                    <button>5</button>
                 </td>
                 <td>
-                    <button value="3" id="3" class="numbers">3</button>
+                    <button>6</button>
                 </td>
                 <td>
-                    <button class="operators">-</button>
+                    <button>+</button>
             </tr>
             <tr>
                 <td>
-                    <button class="modifiers">+-</button>
+                    <button>1</button>
                 </td>
                 <td>
-                    <button value="0" id="0" class="numbers">0</button>
+                    <button>2</button>
                 </td>
                 <td>
-                    <button class="operators">.</button>
+                    <button>3</button>
                 </td>
                 <td>
-                    <button class="green" id="result-button">=</button>
+                    <button>-</button>
+            </tr>
+            <tr>
+                <td>
+                    <button>+-</button>
+                </td>
+                <td>
+                    <button>0</button>
+                </td>
+                <td>
+                    <button>.</button>
+                </td>
+                <td>
+                    <button>=</button>
             </tr>
         </table>
-        <script>
-            var inputLabel = document.getElementById("calc-display");
-            var numbers = document.getElementsByClassName("numbers");
-
-            var clearallbutton = document.getElementById("clear-all-button");
-            var clearbutton = document.getElementById("clear-button");
-
-           // console.log("numbers", numbers)
-            for(let i = 0; i < numbers.length; i++){
-                numbers[i].addEventListener("click", function(){
-                    var pushed = this.value;
-                    inputLabel.value = inputLabel.value + pushed;
-                })
-            }
-
-            clearallbutton.addEventListener("click", function(){
-                    inputLabel.value = "";
-                })
-            clearbutton.addEventListener("click", function(){
-                    var maxLenght = inputLabel.value.length;
-                    inputLabel.value = inputLabel.value.substr(0, maxLenght - 1)
-                })
-        </script>
     </body>
 </html>
