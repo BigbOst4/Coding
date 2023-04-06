@@ -4,6 +4,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* html */
+html{
+    scroll-behavior: smooth;
+}
 /* body */
 body{
     padding: 0 10px;
